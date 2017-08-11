@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int max=(int)(Math.pow(2,32) -1);
+        int min=(int)(Math.pow(2,-32) );
+        Scanner sc=new Scanner(System.in);
+        String s1=sc.next();
+       String s2=sc.next();
+      
+        Integer a=0;Integer b=0;
+        try{
+            
+                          a=Integer.parseInt(s1);
+            b=Integer.parseInt(s2);
+            
+            
+             
+          if((a instanceof Integer) && (b instanceof Integer))
+           {
+            //if(((a<=max) &&(a>=min))&& ((a<=max) &&(a>=min)))
+          //  {
+              int  div=(a/b);
+                if(div!=0)
+                {
+                     System.out.println(div);         
+                }
+                else {
+                throw new Exception("java.lang.ArithmeticException: / by zero");
+            }
+          //  }
+          }
+            else {
+                throw new Exception("java.util.InputMismatchException");
+            }
+        }catch(NumberFormatException e)
+        {
+            System.out.println("java.util.InputMismatchException");
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+}
